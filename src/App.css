@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#topMenu {
+  height: 60px;
+  background-color: blueviolet;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#topMenu ul li {
+  display: inline;
+  list-style: none;
+  margin: 0 20px;
   color: white;
+  line-height: 60px;
 }
-
-.App-link {
-  color: #61dafb;
+#topMenu .menuItem {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#myMain {
+  background-color: aquamarine;
+}
+#myFooter {
+  height: 80px;
+  background-color: red;
+}
+#sanPham {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+#sanPham .item {
+  width: 340px;
+  height: 100px;
+  border: 1px solid silver;
+}
+#modal {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  bottom: 80px;
+  right: 0;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+}
+#modal button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
