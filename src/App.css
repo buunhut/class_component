@@ -40,8 +40,11 @@
 }
 #sanPham .item {
   width: 340px;
-  height: 100px;
+  /* height: 100px; */
   border: 1px solid silver;
+}
+#sanPham .item img {
+  width: 100%;
 }
 #modal {
   position: absolute;

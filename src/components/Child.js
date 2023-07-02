@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-export default class ChiTiet extends Component {
+export default class Child extends Component {
   constructor(props) {
     super();
     this.state = {
@@ -40,7 +40,6 @@ export default class ChiTiet extends Component {
   };
 
   render() {
-    console.log("chi tiết sản phẩm");
     let sanPham = { ...this.state.product };
     let { id, name, price, image, shortDescription: mota } = sanPham;
     return (
