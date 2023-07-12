@@ -1,37 +1,31 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
-import MyTop from "./components/MyTop";
-import MyMain from "./components/MyMain";
-import MyFooter from "./components/MyFooter";
-import ThemeUser from "./components/ThemeUser";
-import LienHe from "./components/LienHe";
-import TinTuc from "./components/TinTuc";
-import SanPham from "./components/SanPham";
-import ChiTiet from "./components/ChiTiet";
-import Child from "./components/Child";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MyBody from "./Components/MyBody";
+import TrangChu from "./Components/TrangChu";
+import SanPham from "./Components/SanPham";
+import TinTuc from "./Components/TinTuc";
+import LienHe from "./Components/LienHe";
+import ChiTietSanPham from "./Components/ChiTietSanPham";
+import DemoDuyetPhieu from "./Components/DemoDuyetPhieu";
+import DemoDuyetPhieuNo from "./Components/DemoDuyetPhieuNo";
+import DemoThuNo from "./Components/DemoThuNo";
+import ADongDemoNo from "./Components/ADongDemoNo";
 
 function App() {
   return (
-    <div className="container">
-      {/* <h1>Hello Chịa</h1>
-      <MyTop />
-      <MyMain />
-      <MyFooter /> */}
-
-      <BrowserRouter>
-        <Routes>
-          <Route path="" element={<ThemeUser />}>
-            <Route index element={<MyMain />} />
-            <Route path="sanpham" element={<SanPham />}>
-              <Route path=":id" element={<Child />} />
-            </Route>
-            <Route path="chitiet" element={<ChiTiet />} />
-            <Route path="lienhe" element={<LienHe />} />
-            <Route path="tintuc" element={<TinTuc />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MyBody />}>
+          <Route index element={<TrangChu />} />
+          <Route path="chitietsanpham/:id" element={<ChiTietSanPham />} />
+          <Route path="sanpham" element={<SanPham />} />
+          <Route path="tintuc" element={<TinTuc />} />
+          <Route path="lienhe" element={<LienHe />} />
+          <Route path="demo" element={<DemoThuNo />} />
+          {/* <Route path="demo" element={<ADongDemoNo />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

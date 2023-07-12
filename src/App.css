@@ -4,59 +4,125 @@
   box-sizing: border-box;
 }
 .container {
-  width: 1140px;
+  width: 1180px;
   margin: 0 auto;
   position: relative;
 }
-#topMenu {
-  height: 60px;
-  background-color: blueviolet;
-}
-#topMenu ul li {
-  display: inline;
-  list-style: none;
-  margin: 0 20px;
+#myHeader {
+  height: 40px;
   color: white;
-  line-height: 60px;
-}
-#topMenu .menuItem {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-#myMain {
-  background-color: aquamarine;
-}
-#myFooter {
-  height: 80px;
-  background-color: red;
-}
-#sanPham {
-  margin: 20px 0;
+  background-color: blue;
+  text-align: center;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+  align-items: center;
+  /* margin-bottom: 20px; */
 }
-#sanPham .item {
-  width: 340px;
-  /* height: 100px; */
-  border: 1px solid silver;
+#myHeader .gioHang {
+  margin-right: 20px;
+  border: 2px solid white;
+  /* border-radius: 8px; */
+  background-color: transparent;
+  color: white;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.5s;
 }
-#sanPham .item img {
-  width: 100%;
+#myHeader .gioHang:hover {
+  background-color: orangered;
 }
-#modal {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  bottom: 80px;
-  right: 0;
+#myHeader ul li {
+  display: inline;
+  margin: 0 20px;
+  line-height: 40px;
+}
+#myHeader .myLink {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+}
+#myBody {
+  /* height: 500px; */
+  /* color: white; */
+  /* background-color: red; */
+  padding: 30px;
   text-align: center;
-  background-color: rgb(250, 250, 250);
+  font-size: 30px;
 }
-#modal button {
-  position: absolute;
-  top: 5px;
-  left: 5px;
+#myFooter {
+  margin-top: 40px;
+  height: 100px;
+  color: white;
+  background-color: black;
+}
+/* trang sản phẩm */
+#listSanPham {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#listSanPham .item {
+  width: 380px;
+  border: 1px solid silver;
+  border-radius: 10px;
+}
+/* trang chi tiết */
+#chiTietSanPham {
+  text-align: center;
+  padding: 30px 0;
+}
+/* trang liên hệ */
+#lienHe .iframe {
+  width: 100%;
+  height: 600px;
+}
+#gioHang {
+  position: fixed;
+  top: 40px;
+  right: 0;
+  height: 100vh;
+  background-color: rgb(253, 253, 253);
+  text-align: center;
+  z-index: 2;
+}
+
+#gioHang table {
+  border-collapse: collapse;
+}
+#gioHang table tr th {
+  padding: 5px 10px;
+}
+#gioHang table tr td {
+  padding: 5px 10px;
+  border-bottom: 1px solid silver;
+}
+
+#congNo {
+  width: 800px;
+  margin: 0 auto;
+}
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+#myTable thead tr th {
+  padding: 5px 10px;
+  border-bottom: 1px solid silver;
+  background-color: blue;
+  color: white;
+  font-size: 14px;
+  text-align: left;
+}
+#myTable tbody tr:nth-child(even) {
+  background-color: rgb(237, 237, 255);
+}
+#myTable tbody tr td {
+  padding: 5px 10px;
+  border-bottom: 1px solid silver;
 }
